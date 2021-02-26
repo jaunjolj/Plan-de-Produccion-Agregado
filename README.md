@@ -41,7 +41,7 @@ Al final, en el ejemplo que se muestra, sólo es necesario modificar los paráme
 
 #### Pronóstico
 
-
+https://raw.githubusercontent.com/jaunjolj/Plan-de-Produccion-Agregado/master/ForecastExample.png
 
 #### Resultados del Plan Agregado de Producción
 
