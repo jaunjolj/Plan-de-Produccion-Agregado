@@ -22,7 +22,7 @@ Si tienes previos conocimientos sobre el control de la producción será más f�
 Utilizarás dos archivos en el siguiente orden: "ForecastEq.R" y "AutoAggrPP.R".
 
 * Primero, deberás ejecutar el archivo "ForecastEq.R" para realizar un pronóstico de la demanda.
-Para obtener el mismo, se utilizarán los datos que asocies a la variable 'trainingData'. *Si no ejecutas primero este archivo, no podrás continuar correctamente.*
+Para obtener el mismo, se utilizarán los datos que asocies a la variable 'trainingData'. **Si no ejecutas primero este archivo, no podrás continuar correctamente.**
 
 * Posteriormente, en el archivo "AutoAggrPP.R" visualizarás una función que te mostrará el resultado del Plan Agregado de Producción, esta necesitará algunos parámetros:
   *  En la variable ´f´ deberás colocar el pronóstico que obtuviste en "ForecastEq.R". 
@@ -42,7 +42,7 @@ Ejemplo:
            //p0=41383
            //d0=260
            //wkr0=40
-´´´´
+´´´
 * Finalmente, sólo deberás ejecutar todo el código de "AutoAggrPP.R" y te dará el cosot resultante junto con el valor de cada variable de la función objetivo.
 
 ### 3. Explicación del código
