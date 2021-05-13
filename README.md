@@ -53,7 +53,7 @@ Estos procedimientos están de manera predeterminada en RStudio. Una vez realiza
 
 Posteriormente, en el archivo "AutoAggrPP.R" se muestra una función que ejecutará diferentes procedimientos,  dependiendo del número de periodos establecidos. Dicha función contiene muchas matrices con diversas variables que favorecen la realización y obtención del Plan Agregado de Producción.
 
-Al final del código de este archivo, es necesario modificar los parámetros de la función y al ejecutar su variable asociada te mostrará el resultado del plan.
+Al final del código de este archivo, es necesario agregar los parámetros a la función y al ejecutar su variable asociada te mostrará el resultado del plan.
 
 ### 4. Ejemplo gráfico y resultados.
 
