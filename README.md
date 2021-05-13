@@ -1,23 +1,22 @@
 # Plan de Producción Agregado
 
 ## Tabla de contenido
-    1. Introducción.
+    1. Presentación del README.
     2. Estructura del código.
     3. Explicación del código.
     4. Ejemplo gráfico y resultados.
 
-### 1. Introducción
+### 1. Presentación del README
 
-La planeación y el control de la producción son actividades que sistematizan diversos métodos que se utilizan para optimizar la cadena de producción.
-Previamente a esta actividad, ya existieron análisis de recursos humanos, materiales, maquinaria, planificación de instalaciones,etc. Estos procesos y actividades se centran en la demanda comercial.
-
-Una actividad muy importante en la planeación y el control de la producción es la planeación agregada, esta contiene, como muchas otras, varias entradas, procesos intermedios y salidas, el siguiente diagrama nos muestra los elementos que contiene la planeación agregada.
+El siguiente diagrama nos muestra los elementos que contiene la planeación agregada.
 
 https://raw.githubusercontent.com/jaunjolj/Plan-de-Produccion-Agregado/master/DiagramaPlanning.png
 
+
+
 En este documento, se explicará la estructura del código, la explicación del mismo y se mostrará un ejemplo gráfico de un pronóstico de la demanda y los resultados de un plan agregado de producción.
 
-### 2. Estructura del código.
+### 2. Estructura del código
 
 Para realizar un plan agregado de producción, es necesario previamente realizar un pronóstico de la demanda, en el archivo "ForecastEq.R" podrás identificar dicho procedimiento.
 Si requieres un pronóstico diferente al que se muestra en el archivo, tendrás que obtener o colocar los datos que necesitas para realizar dicho pronóstico y asociarlos a la variable 'trainingData'. Una vez hecho esto, es recomendable que ejecutes este código.
