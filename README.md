@@ -43,17 +43,17 @@ Ejemplo:
            //d0=260
            //wkr0=40
 ```
-* Finalmente, sólo deberás ejecutar todo el código de "AutoAggrPP.R" y te dará el cosot resultante junto con el valor de cada variable de la función objetivo.
+* Finalmente, sólo deberás ejecutar todo el código de "AutoAggrPP.R" y te dará el costo resultante junto con el valor de cada variable de la función objetivo.
 
 ### 3. Explicación del código
 
-En el archivo "ForecastEq.R", al colocar la información necesaria para realizar un pronóstico de la demanda, se utiliza la variable 'trainingData' para obtener ciertos datos estadísticos. Estos datos se utilizan en 6 procedimientos diferentes: naive, seasonal naive, ses, holt, hwMultiplicative y hwAdditive.
+En el archivo "ForecastEq.R", se utilizan los datos asociados a la variable 'trainingData' para obtener cierta información estadística. Estos datos se utilizan en 6 procedimientos diferentes: naive, seasonal naive, ses, holt, hwMultiplicative y hwAdditive.
 
-Estos procedimientos están de manera predeterminada en RStudio. Una vez realizados, el programa evalúa cuál de estos procedimientos es el más eficiente y lo guarda en una variable. Esta última, obtiene el dato específico del pronóstico en otra variable. Al ejecutarla, mostrará los datos del pronóstico. 
+Estos procedimientos están de manera predeterminada en RStudio. Una vez realizados, el programa evalúa cuál de estos es el más eficiente y lo guarda en una variable. Esta última, obtiene el dato específico del pronóstico en otra variable. Al ejecutarla, mostrará los datos del pronóstico. 
 
-En el archivo "AutoAggrPP.R" se muestra una función que, dependiendo del número de variables que abarque tú función objetivo, ejecutará un procedimiento distinto. Dicha función contiene muchas matrices con diversas variables que favorecen la realización y obtención del Plan Agregado de Producción.
+Posteriormente, en el archivo "AutoAggrPP.R" se muestra una función que ejecutará diferentes procedimientos,  dependiendo del número de periodos establecidos. Dicha función contiene muchas matrices con diversas variables que favorecen la realización y obtención del Plan Agregado de Producción.
 
-Al final, en el ejemplo que se muestra, sólo es necesario modificar los parámetros de la función y al ejecutar su variable asociada te mostrará el resultado del plan.
+Al final del código de este archivo, es necesario modificar los parámetros de la función y al ejecutar su variable asociada te mostrará el resultado del plan.
 
 ### 4. Ejemplo gráfico y resultados.
 
@@ -62,7 +62,7 @@ Al final, en el ejemplo que se muestra, sólo es necesario modificar los paráme
 https://raw.githubusercontent.com/jaunjolj/Plan-de-Produccion-Agregado/master/ForecastExample.png
 
 #### Resultados del Plan Agregado de Producción
-
+```
 > print(paste("The total cost is: ", aggregateProductionPlan$objval))
 **[1] "The total cost is:  605184.363191945"**
 > best_sol <- aggregateProductionPlan$solutio
@@ -77,3 +77,4 @@ https://raw.githubusercontent.com/jaunjolj/Plan-de-Produccion-Agregado/master/Fo
          I5          B5          P5          W6          H6          F6          I6          B6          P6 
    0.000000    0.000000 3180.000000   33.127349    0.000000    3.198503    0.000000    0.000000 2900.000000 **
 > 
+```
