@@ -30,7 +30,7 @@ Para obtener el mismo, se utilizarán los datos que asocies a la variable 'train
   *  Si existían producción, trabajadores o días en el periodo anterior, deberás colocarlos en las variables 'p0', 'wkr0' y 'd0', respectivamente.
 
 Ejemplo:
-´´´
+```
            //f=c(2760,3320,3970,3540,3180,2900)
            //objFunction <- c(0,0,0,
                  15*8*21,450,600,5,15,0,0,0,0,
@@ -42,7 +42,7 @@ Ejemplo:
            //p0=41383
            //d0=260
            //wkr0=40
-´´´
+```
 * Finalmente, sólo deberás ejecutar todo el código de "AutoAggrPP.R" y te dará el cosot resultante junto con el valor de cada variable de la función objetivo.
 
 ### 3. Explicación del código
