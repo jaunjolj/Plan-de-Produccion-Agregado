@@ -1,30 +1,50 @@
 # Plan de Producción Agregado
 
 ## Tabla de contenido
-    1. Presentación del README.
+    1. Contexto del programa.
     2. Estructura del código.
     3. Explicación del código.
     4. Ejemplo gráfico y resultados.
 
-### 1. Presentación del README
+### 1. Contexto del programa
 
-El siguiente diagrama nos muestra los elementos que contiene la planeación agregada.
+En la segunda fila del siguiente diagrama de producción, se encuentra el plan agregado de producción, este es el primer elemento que debe obtenerse una vez iniciada la producción.
 
 https://raw.githubusercontent.com/jaunjolj/Plan-de-Produccion-Agregado/master/DiagramaPlanning.png
 
+Para conseguirlo, es necesario hacer muchos cálculos y previamente tener un pronóstico de la demanda. El programa en R de este repositorio fue creado para obtenerlo de manera más sencilla.
 
-
-En este documento, se explicará la estructura del código, la explicación del mismo y se mostrará un ejemplo gráfico de un pronóstico de la demanda y los resultados de un plan agregado de producción.
+En este documento, se explicará la estructura del código, la explicación del mismo y se mostrarán los resultados correspondiente al plan de producción agregada.
+Si tienes previos conocimientos sobre el control de la producción será más fácil para ti utilizar este programa.
 
 ### 2. Estructura del código
 
-Para realizar un plan agregado de producción, es necesario previamente realizar un pronóstico de la demanda, en el archivo "ForecastEq.R" podrás identificar dicho procedimiento.
-Si requieres un pronóstico diferente al que se muestra en el archivo, tendrás que obtener o colocar los datos que necesitas para realizar dicho pronóstico y asociarlos a la variable 'trainingData'. Una vez hecho esto, es recomendable que ejecutes este código.
+Utilizarás dos archivos en el siguiente orden: "ForecastEq.R" y "AutoAggrPP.R".
 
-Posteriormente, en el archivo "AutoAggrPP.R" visualizarás una función que utilizará ciertos elementos, la cual te mostrará el resultado del Plan Agregado de Producción.
-Después de dicha función, se mostrará un ejemplo que tomará el pronóstico inicial obtenido en el archivo "ForecastEq.R", si requieres obtener el Plan Agregado de Producción de otro pronóstico, será necesario que en la variable ´f´ coloques el nuevo pronóstico que obtuviste. También es necesario que en la variable 'objFunction' coloques una matriz con los nombres de las variables de una función objetivo.
+* Primero, deberás ejecutar el archivo "ForecastEq.R" para realizar un pronóstico de la demanda.
+Para obtener el mismo, se utilizarán los datos que asocies a la variable 'trainingData'. 
 
-Finalmente, sólo deberás ejecutar todo el código de "AutoAggrPP.R" y te dará el resultado.
+Deberás ejecutar primero este archivo porque el pronóstico generado lo usarás en el segundo archivo.
+
+* Posteriormente, en el archivo "AutoAggrPP.R" visualizarás una función que te mostrará el resultado del Plan Agregado de Producción, esta necesitará algunos parámetros:
+*  En la variable ´f´ deberás colocar el pronóstico que obtuviste en "ForecastEq.R". 
+*  En la variable 'objFunction' deberás colocar los valores de las variables de tu función objetivo (generada por ti).
+*  Si existían producción, trabajadores o días en el periodo anterior, deberás colocarlos en las variables 'p0', 'wkr0' y 'd0', respectivamente.
+
+Ejemplo:
+           //f=c(2760,3320,3970,3540,3180,2900)
+           //objFunction <- c(0,0,0,
+                 15*8*21,450,600,5,15,0,0,0,0,
+                 15*8*20,450,600,5,15,0,0,0,0,
+                 15*8*23,450,600,5,15,0,0,0,0,
+                 15*8*21,450,600,5,15,0,0,0,0,
+                 15*8*22,450,600,5,15,0,0,0,0,
+                 15*8*22,450,600,5,15,0,0,0,0)
+           //p0=41383
+           //d0=260
+           //wkr0=40
+
+* Finalmente, sólo deberás ejecutar todo el código de "AutoAggrPP.R" y te dará el cosot resultante junto con el valor de cada variable de la función objetivo.
 
 ### 3. Explicación del código
 
