@@ -22,17 +22,15 @@ Si tienes previos conocimientos sobre el control de la producción será más f�
 Utilizarás dos archivos en el siguiente orden: "ForecastEq.R" y "AutoAggrPP.R".
 
 * Primero, deberás ejecutar el archivo "ForecastEq.R" para realizar un pronóstico de la demanda.
-Para obtener el mismo, se utilizarán los datos que asocies a la variable 'trainingData'. 
-
-Deberás ejecutar primero este archivo porque el pronóstico generado lo usarás en el segundo archivo.
+Para obtener el mismo, se utilizarán los datos que asocies a la variable 'trainingData'. *Si no ejecutas primero este archivo, no podrás continuar correctamente.*
 
 * Posteriormente, en el archivo "AutoAggrPP.R" visualizarás una función que te mostrará el resultado del Plan Agregado de Producción, esta necesitará algunos parámetros:
-*  En la variable ´f´ deberás colocar el pronóstico que obtuviste en "ForecastEq.R". 
-*  En la variable 'objFunction' deberás colocar los valores de las variables de tu función objetivo (generada por ti).
-*  Si existían producción, trabajadores o días en el periodo anterior, deberás colocarlos en las variables 'p0', 'wkr0' y 'd0', respectivamente.
+  *  En la variable ´f´ deberás colocar el pronóstico que obtuviste en "ForecastEq.R". 
+  *  En la variable 'objFunction' deberás colocar los valores de las variables de tu función objetivo (generada por ti).
+  *  Si existían producción, trabajadores o días en el periodo anterior, deberás colocarlos en las variables 'p0', 'wkr0' y 'd0', respectivamente.
 
 Ejemplo:
-'''
+´´´
            //f=c(2760,3320,3970,3540,3180,2900)
            //objFunction <- c(0,0,0,
                  15*8*21,450,600,5,15,0,0,0,0,
@@ -44,7 +42,7 @@ Ejemplo:
            //p0=41383
            //d0=260
            //wkr0=40
-'''
+´´´´
 * Finalmente, sólo deberás ejecutar todo el código de "AutoAggrPP.R" y te dará el cosot resultante junto con el valor de cada variable de la función objetivo.
 
 ### 3. Explicación del código
